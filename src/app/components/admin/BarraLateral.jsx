@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 export default function BarraLateral() {
     const [isOpen, setIsOpen] = useState(window.innerWidth >= 768); // Inicializa según el ancho de la ventana
     const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+    const [isSubMenuemOpen, setIsSubMenuemOpen] = useState(false);
+    const [isSubMenuicOpen, setIsSubMenuicOpen] = useState(false);
 
     const handleToggle = () => {
         if (window.innerWidth < 768) {
@@ -15,6 +17,12 @@ export default function BarraLateral() {
 
     const toggleSubMenu = () => {
         setIsSubMenuOpen(prev => !prev);
+    };
+    const toggleSubMenuEm = () => {
+        setIsSubMenuemOpen(prev => !prev);
+    };
+    const toggleSubMenuIc = () => {
+        setIsSubMenuicOpen(prev => !prev);
     };
 
     useEffect(() => {
@@ -66,7 +74,7 @@ export default function BarraLateral() {
                     </Link>
                 </div>
                 <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
-                    <Link href="" className="flex whitespace-nowrap items-center">
+                    <Link href="/administrador/asig-tareas" className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-list-check text-lg sm:text-xl "></i>
                         <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
                             Asignación de tareas
@@ -74,7 +82,7 @@ export default function BarraLateral() {
                     </Link>
                 </div>
                 <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
-                    <Link href="" className="flex whitespace-nowrap items-center">
+                    <Link href="/administrador/gestion-usuarios" className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-user text-lg sm:text-xl "></i>
                         <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
                             Gestión de usuarios
@@ -82,7 +90,7 @@ export default function BarraLateral() {
                     </Link>
                 </div>
                 <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
-                    <Link href="" className="flex whitespace-nowrap items-center">
+                    <Link href="/administrador/pagos" className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-sack-dollar text-lg sm:text-xl "></i>
                         <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
                             Pagos
@@ -90,7 +98,7 @@ export default function BarraLateral() {
                     </Link>
                 </div>
                 <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
-                    <Link href="" className="flex whitespace-nowrap items-center">
+                    <Link href="/administrador/registro-incidentes" className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-circle-exclamation text-lg sm:text-xl"></i>
                         <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
                             Registro incidencias
@@ -98,7 +106,7 @@ export default function BarraLateral() {
                     </Link>
                 </div>
                 <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
-                    <Link href="" className="flex whitespace-nowrap items-center">
+                    <Link href="/administrador/historial-registro" className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-clock text-lg sm:text-xl"></i>
                         <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
                             Historial de Registro
@@ -106,7 +114,7 @@ export default function BarraLateral() {
                     </Link>
                 </div>
                 <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
-                    <Link href="" className="flex whitespace-nowrap items-center">
+                    <Link href="/administrador/galeria" className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-image text-lg sm:text-xl"></i>
                         <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
                             Registro fotográfico
@@ -133,18 +141,20 @@ export default function BarraLateral() {
                 <div
                     className={`text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 ${isSubMenuOpen ? "block" : "hidden"} transition-all duration-300`}
                 >
-                    <Link href="Formulario1">
+                    <Link href="/administrador/recoleccion-fuentes">
                         <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
                             Registro de recolección <br /> en fuentes
                         </h1>
                     </Link>
-                    <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-                        Formato registro <br /> operativo en ruta
-                    </h1>
+                    <Link href="/administrador/registro-operativo-ruta">
+                        <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
+                            Formato registro <br /> operativo en ruta
+                        </h1>
+                    </Link>
                 </div>
                 <div
                     className={`p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 justify-between ${isOpen ? undefined : "justify-start"}`}
-                    onClick={isOpen ? toggleSubMenu : undefined}
+                    onClick={isOpen ? toggleSubMenuEm : undefined}
                 >
                     <i className={`fa-solid fa-chart-simple text-xl`}></i>
                     <div className={`flex w-full items-center whitespace-nowrap ${isOpen ? "justify-between" : "hidden"}`}>
@@ -157,20 +167,22 @@ export default function BarraLateral() {
                     </div>
                 </div>
                 <div
-                    className={`text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 ${isSubMenuOpen ? "block" : "hidden"} transition-all duration-300`}
+                    className={`text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 ${isSubMenuemOpen ? "block" : "hidden"} transition-all duration-300`}
                 >
-                    <Link href="Formulario1">
+                    <Link href="/administrador/estadisticas">
                         <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
                             Estadisticas
                         </h1>
                     </Link>
-                    <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-                        Metricas
-                    </h1>
+                    <Link href="/administrador/metricas">
+                        <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
+                            Metricas
+                        </h1>
+                    </Link>
                 </div>
                 <div
                     className={`p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 ${isOpen ? "justify-between" : "justify-start"}`}
-                    onClick={isOpen ? toggleSubMenu : undefined}
+                    onClick={isOpen ? toggleSubMenuIc : undefined}
                 >
                     <i className={`fa-solid fa-circle-check text-xl`}></i>
                     <div className={`flex w-full items-center whitespace-nowrap ${isOpen ? "justify-between" : "hidden"}`}>
@@ -183,16 +195,18 @@ export default function BarraLateral() {
                     </div>
                 </div>
                 <div
-                    className={`text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 ${isSubMenuOpen ? "block" : "hidden"} transition-all duration-300`}
+                    className={`text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 ${isSubMenuicOpen ? "block" : "hidden"} transition-all duration-300`}
                 >
-                    <Link href="Formulario1">
+                    <Link href="/administrador/informes">
                         <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
                             Informes
                         </h1>
                     </Link>
-                    <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-                        Certificados
-                    </h1>
+                    <Link href="/administrador/certificados">
+                        <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
+                            Certificados
+                        </h1>
+                    </Link>
                 </div>
                 <div className="h-10">
                     <hr className="my-2 text-gray-900" />

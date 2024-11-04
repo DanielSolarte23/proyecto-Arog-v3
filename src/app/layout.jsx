@@ -1,4 +1,5 @@
 
+import BarraHeader from "./components/publicas/BarraHeader";
 import "./globals.css";
 
 export const metadata = {
@@ -9,8 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>
-        {children}
+      <body className="h-screen">
+        <BarraHeader />
+        <main className="h-full">
+          {children}
+        </main>
+        
       </body>
     </html>
   );

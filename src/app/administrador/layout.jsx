@@ -1,4 +1,4 @@
-import BarraLateral from "../components/BarraLateral";
+import BarraLateral from "../components/admin/BarraLateral";
 import "../globals.css";
 
 

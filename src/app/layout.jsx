@@ -11,11 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className="h-screen">
-        <BarraHeader />
+        <BarraHeader className={"fixed"} />
         <main className="h-full">
           {children}
         </main>
-        
+
       </body>
     </html>
   );

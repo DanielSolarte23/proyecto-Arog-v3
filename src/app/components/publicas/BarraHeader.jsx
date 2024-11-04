@@ -6,14 +6,12 @@ import LogoArog from "./LogoArog";
 // import { useAuth } from "../../context/AuthContext";
 
 
-function BarraHeader() {
+function BarraHeader({className}) {
     // const { isAuthenticated, logout, user } = useAuth();
-
-
     return (
         <header
             id="header1"
-            className="w-full h-1/6 shadow-lg z-50 flex items-center bg-white fixed px-8 justify-between"
+            className={`w-full h-1/8 shadow-lg z-50 flex items-center bg-white  px-8 justify-between ${className}`}
         >
             {/* Contenedor de logo y texto */}
             <a href="#Inicio" className="flex">

@@ -3,9 +3,9 @@ import React from 'react'
 function Bienvenida() {
     return (
         <div className='h-screen' id="Inicio">
-            <div className='h-1/6'></div>
+            <div className='h-1/8'></div>
             <div
-                className="w-full contenedor-bienvenida px-5 h-5/6 md:px-28 items-center flex "
+                className="w-full contenedor-bienvenida px-5 h-7/8 md:px-28 items-center flex "
             >
                 {/* Contenedor de la imagen y texto */}
                 <section className="w-full h-5/6 flex  rounded-2xl bg-cover bg-center  bg-no-repeat hoja-verde">

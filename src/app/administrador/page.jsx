@@ -1,10 +1,7 @@
-import BarraLateral from "../components/admin/BarraLateral"
 
 function Page() {
   return (
-    <div className="h-screen">
-
-    </div>
+    <h1>Perfil</h1>
   )
 }
 

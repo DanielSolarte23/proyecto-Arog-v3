@@ -113,6 +113,16 @@ export default function BarraLateral() {
                         </span>
                     </div>
                 </Link>
+
+                <Link href="/administrador/registro-operativo-ruta" className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
+                    <div className="flex whitespace-nowrap items-center">
+                        <i className="fa-solid fa-circle-exclamation text-lg sm:text-xl"></i>
+                        <span className={`md:text-[15px] ml-2 text-gray-900 ${isOpen ? "block" : "hidden"}`}>
+                            Registro Operativo
+                        </span>
+                    </div>
+                </Link>
+
                 <Link href="/administrador/galeria" className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900 whitespace-nowrap">
                     <div className="flex whitespace-nowrap items-center">
                         <i className="fa-solid fa-image text-lg sm:text-xl"></i>

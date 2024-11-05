@@ -11,6 +11,7 @@ export const metadata = {
 export default function AdministradorLayout({ children }) {
     return (
         <>
+            
             <div className="h-1/8"></div>
             <main className="flex h-7/8">
                 <BarraLateral />

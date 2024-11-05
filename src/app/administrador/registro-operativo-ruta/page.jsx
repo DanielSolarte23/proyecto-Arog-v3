@@ -1,9 +1,11 @@
 import React from 'react'
+import Comp from './ContenedorAdministradorcomponent'
+
 
 function page() {
   return (
     <div>
-      Registro operativo en ruta
+      <Comp/>
     </div>
   )
 }

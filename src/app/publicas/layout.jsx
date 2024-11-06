@@ -6,12 +6,10 @@ export const metadata = {
     description: "Sitio Administrador",
 };
 
-export default function RootLayout({ children }) {
+export default function PublicasLayout({ children }) {
     return (
-        <html lang="es">
-            <body>
-                {children}
-            </body>
-        </html>
+        <body>
+            {children}
+        </body>
     );
 }

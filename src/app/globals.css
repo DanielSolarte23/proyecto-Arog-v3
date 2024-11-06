@@ -20,24 +20,36 @@ html {
 
 /* Aplica estilos personalizados a la barra de desplazamiento en Safari y Chrome */
 .scrollbar::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
+  width: 10px;
+  /* Ancho de la barra de desplazamiento */
 }
 
 .scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color de la pista */
+  background: #f1f1f1;
+  /* Color de la pista */
   border-radius: 30px;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del pulgar */
-  border-radius: 30px; /* Bordes redondeados del pulgar */
-  border: 2px solid #f1f1f1; /* Espacio alrededor del pulgar */
+  background-color: #888;
+  /* Color del pulgar */
+  border-radius: 30px;
+  /* Bordes redondeados del pulgar */
+  border: 2px solid #f1f1f1;
+  /* Espacio alrededor del pulgar */
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color del pulgar al pasar el ratón */
+  background: #555;
+  /* Color del pulgar al pasar el ratón */
 }
 
 .hoja-verde {
   background-image: url(../../public/textura-hoja-verde.jpg);
+}
+
+.fondo-logo {
+  background-image: url(../../public/FondoLog-Reg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }

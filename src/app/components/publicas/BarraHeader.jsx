@@ -6,7 +6,7 @@ import LogoArog from "./LogoArog";
 // import { useAuth } from "../../context/AuthContext";
 
 
-function BarraHeader({className}) {
+function BarraHeader({ className }) {
     // const { isAuthenticated, logout, user } = useAuth();
     return (
         <header
@@ -14,12 +14,12 @@ function BarraHeader({className}) {
             className={`w-full h-1/8 shadow-lg z-50 flex items-center bg-white  px-8 justify-between ${className}`}
         >
             {/* Contenedor de logo y texto */}
-            <a href="#Inicio" className="flex">
+            <Link href="/" className="flex">
                 <section className="flex w-5/6 h-full flex-shrink-0">
                     {/* Contenedor del logo */}
                     <LogoArog className={"w-20 h-20"} />
                 </section>
-            </a>
+            </Link>
 
             {/* Contenedor del menú */}
             <nav className="flex items-center navegacion">
@@ -63,7 +63,7 @@ function BarraHeader({className}) {
                             <li>
                                 <Link
                                     className="px-3 py-1 border border-lime-600 rounded-md text-lime-600 whitespace-nowrap"
-                                    href="/register"
+                                    href="/registro"
                                 >
                                     Crear cuenta
                                 </Link>

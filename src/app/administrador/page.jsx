@@ -1,8 +1,11 @@
+import Perfil from "../components/admin/formPerfilComponent";
 
 function Page() {
   return (
-    <h1>Perfil</h1>
-  )
+    <>
+      <Perfil />
+    </>
+  );
 }
 
-export default Page
+export default Page;

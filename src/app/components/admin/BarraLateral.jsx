@@ -45,7 +45,7 @@ export default function BarraLateral() {
     return (
         <>
             <div
-                className={`sidebar shadow-xl h-full scrollbar bottom-0 xl:left-0 p-2 bg-white transition-all duration-700 ${isOpen ? "w-5/6" : "w-20"} md:w-1/5 overflow-y-auto text-center`}
+                className={`sidebar shadow-xl h-7/8 scrollbar bottom-0 xl:left-0 p-2 bg-white transition-all duration-700 ${isOpen ? "w-5/6" : "w-20"} md:w-1/5 overflow-y-auto text-center fixed`}
             >
                 <div className={`flex items-center justify-end mr-1`}>
                     <button

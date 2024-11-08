@@ -4,8 +4,8 @@ import Comp from './ContenedorAdministradorcomponent'
 
 function page() {
   return (
-    <div>
-      <Comp/>
+    <div className=' ml-96 mt-6 '>
+      <Comp />
     </div>
   )
 }

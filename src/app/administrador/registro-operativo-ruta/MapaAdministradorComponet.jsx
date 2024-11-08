@@ -6,7 +6,7 @@ const Imagen = () => {
     return (
         <div >
 
-            <img className="flex w-full rounded-3xl border border-black		" src="/Maps.png" />
+            <img className="mx-16 my-4 flex  rounded-3xl border border-black" src="/Maps.png" />
 
         </div>
     )

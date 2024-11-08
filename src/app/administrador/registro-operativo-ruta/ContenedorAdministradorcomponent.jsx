@@ -6,7 +6,7 @@ import Parrafo from "./ParrafoAdministradorcomponent";
 
 const Comp = () => {
     return (
-        <div className="  container flex-col mx-auto mt-9 border border-black rounded-3xl">
+        <div className="border border-black rounded-2xl  ">
             <Imagen />
             <Estado />
             <Titulo />

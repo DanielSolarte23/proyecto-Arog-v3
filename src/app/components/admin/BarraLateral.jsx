@@ -1,4 +1,5 @@
 "use client";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";

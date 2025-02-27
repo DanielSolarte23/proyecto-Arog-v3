@@ -9,10 +9,9 @@ function page() {
       <div className="h-1/8"></div>
       <main className="h-7/8 flex fondo-logo bg-white">
         <div className="w-1/2"></div>
-        <div className="w-1/2 h-full flex pl-14 justify-start items-center">
+        <div className="w-1/2 h-full flex pl-14 justify-start items-center border">
           <div className="w-4/5 h-7/8 bg-white px-14 rounded-lg py-10 border-2 flex flex-col justify-center shadow-xl">
             <h2 className="text-3xl font-bold">Inicia sesión</h2>
-
             <form class="mt-6">
               <div>
                 <label
